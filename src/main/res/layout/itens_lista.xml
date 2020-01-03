@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="@dimen/browser_actions_context_menu_min_padding"
+    android:id="@+id/card_view_anuncios"
+    tools:context=".Activitys.AnunciosDaSemana">
+
+
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/progressBarId"/>
+
+        <ImageView
+            android:importantForAutofill="auto"
+            android:id="@+id/imagem_evento_anuncios"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:adjustViewBounds="false"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/titulo_evento_anuncios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+
+
+
+                <TextView
+                    android:id="@+id/data_evento_anuncios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/data"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorPrimary" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/descricao_evento_anuncios"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:text="@string/descri_evento"
+            android:textColor="@android:color/holo_blue_bright" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

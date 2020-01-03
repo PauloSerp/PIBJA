@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PIBJA</string>
+    <string name="descri_evento">Descrição Evento</string>
+    <string name="data">data</string>
+    <string name="titulo">Titulo</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-3858504858329360~2430581785</string>
+</resources>

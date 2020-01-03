@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "194929647254",
+    "firebase_url": "https://pibja-data.firebaseio.com",
+    "project_id": "pibja-data",
+    "storage_bucket": "pibja-data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194929647254:android:bbb775bb5c53a74dfb2cb7",
+        "android_client_info": {
+          "package_name": "com.example.pibja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194929647254-peun42fkao9qsekak75duo0a1t1fcha9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pibja",
+            "certificate_hash": "2f98a298dfecaaf4133f2615691f2a3f1e59f49c"
+          }
+        },
+        {
+          "client_id": "194929647254-qq7qq5cve861pn34gec37keq998tig59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4B0Hx69kgfDJe7oyTO9PO-h_2Pnr_4qI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194929647254-qq7qq5cve861pn34gec37keq998tig59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
