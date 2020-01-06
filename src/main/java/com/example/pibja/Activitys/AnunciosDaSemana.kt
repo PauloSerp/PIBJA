@@ -1,21 +1,22 @@
 package com.example.pibja.Activitys
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pibja.Utils.Anuncios
 import com.example.pibja.Adapter.AnunciosAdapter
 import com.example.pibja.R
-import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class AnunciosDaSemana : AppCompatActivity() {
+class AnunciosDaSemana :Fragment(){
 
     lateinit var myAd: AdView
     lateinit var listView: RecyclerView
@@ -23,23 +24,16 @@ class AnunciosDaSemana : AppCompatActivity() {
     var listaAnuncios = ArrayList<Anuncios>()
 
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_anuncios_da_semana)
-
-
-        //inicializa addMods
-        MobileAds.initialize(this, "ca-app-pub-3858504858329360~2430581785")
-        listView= findViewById(R.id.recycle_view_anuncios)
-        myAd = findViewById(R.id.adView)
-        val adRequest: AdRequest = AdRequest.Builder().build()
-        myAd.loadAd(adRequest)
-        requisicaoFirebase()
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        val view: View
+        view = inflater.inflate(R.layout.activity_anuncios_da_semana, container, false)
+        requisicaoFirebase(context, view)
+        return view
     }
 
-    private fun requisicaoFirebase() {
+    private fun requisicaoFirebase(context: Context?, view: View) {
 
         val firebaseFirestore = FirebaseFirestore.getInstance()
 
@@ -58,20 +52,24 @@ class AnunciosDaSemana : AppCompatActivity() {
 
 
                 }
-                populaListaAnuncios(listaAnuncios)
+                if (context != null) {
+                    populaListaAnuncios(listaAnuncios, context, view)
+                }
             }
 
     }
 
-    fun populaListaAnuncios(listaAnuncios: ArrayList<Anuncios>){
+    fun populaListaAnuncios(listaAnuncios: ArrayList<Anuncios>, context: Context, view: View){
     this.listaAnuncios = listaAnuncios
-    val layout = LinearLayoutManager(this)
+    val layout = LinearLayoutManager(context)
+
+    listView = view.findViewById(R.id.recycle_view_anuncios)
     listView.layoutManager = layout
-    adapter = AnunciosAdapter(listaAnuncios, this)
+    adapter = AnunciosAdapter(listaAnuncios, context)
     listView.adapter = adapter
-        val progress: ProgressBar = findViewById(R.id.progressBarMain)
+        val progress: ProgressBar = view.findViewById(R.id.progressBarMain)
         progress.visibility = View.GONE
-}
+    }
 }
 
 
