@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activitys.AnunciosDaSemana"></activity>
+        <activity android:name=".ProgramacaoMes"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Activitys.AnunciosDaSemana" />
         <activity android:name=".Activitys.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +22,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3858504858329360~2430581785"/>
+            android:value="ca-app-pub-3858504858329360~2430581785" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

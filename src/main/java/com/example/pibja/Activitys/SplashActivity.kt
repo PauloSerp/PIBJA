@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.pibja.MainActivity
 import com.example.pibja.R
 
 
@@ -16,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Handler().postDelayed({
             startActivity(Intent(this,
-                AnunciosDaSemana::class.java ))
+                MainActivity::class.java ))
             finish()
         },SPLASH_TIME_OUT)
     }
