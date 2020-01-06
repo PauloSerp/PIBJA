@@ -18,7 +18,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class AnunciosDaSemana :Fragment(){
 
-    lateinit var myAd: AdView
     lateinit var listView: RecyclerView
     lateinit var adapter: RecyclerView.Adapter<AnunciosAdapter.AnunciosViewHolder>
     var listaAnuncios = ArrayList<Anuncios>()
