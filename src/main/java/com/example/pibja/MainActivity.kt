@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         val fragmentAdapter = TabAdapter(supportFragmentManager)
         view_pager_layout_main.adapter = fragmentAdapter
         tab_layout_main.setupWithViewPager(view_pager_layout_main)
-        //inicializaComp()
     }
 
 
