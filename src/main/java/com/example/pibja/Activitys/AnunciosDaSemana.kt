@@ -47,9 +47,6 @@ class AnunciosDaSemana :Fragment(){
                             "${document.get("descricao")}"
                         )
                     )
-
-
-
                 }
                 if (context != null) {
                     populaListaAnuncios(listaAnuncios, context, view)

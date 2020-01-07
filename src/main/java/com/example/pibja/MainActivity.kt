@@ -8,7 +8,7 @@ import com.example.pibja.Adapter.TabAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main2.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
