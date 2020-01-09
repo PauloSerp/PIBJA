@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.pkmmte.pkrss:pkrss:1.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/17b8d9ef64c6241bf465040e48dbe6f0/pkrss-1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/17b8d9ef64c6241bf465040e48dbe6f0/pkrss-1.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d8c44eeaa15b135d17c81e1cdf309cb8/pkrss-1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d8c44eeaa15b135d17c81e1cdf309cb8/pkrss-1.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.pkmmte.pkrss/pkrss/1.2/73c0c3d0af5faf925913ee1a70d59cc5059d7f9a/pkrss-1.2-javadoc.jar!/" />

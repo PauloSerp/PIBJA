@@ -43,7 +43,7 @@ class AnunciosDaSemana :Fragment(){
                         Anuncios(
                             "${document.get("titulo")}",
                             "${document.get("data")}",
-                            "${document.get("imagem")}",
+                             "${document.get("imagem")}",
                             "${document.get("descricao")}"
                         )
                     )

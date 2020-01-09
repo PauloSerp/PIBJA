@@ -44,7 +44,7 @@ class AnunciosAdapter (val listsaDeAnuncios: ArrayList<Anuncios>, val context: C
 
         holder.cardView.setOnClickListener {
             val builder = AlertDialog.Builder(context)
-            builder.setTitle("${holder.titulo}")
+            builder.setTitle("${holder.titulo.text}")
             builder.setMessage("${holder.descricao.text}")
             builder.show()
         }
