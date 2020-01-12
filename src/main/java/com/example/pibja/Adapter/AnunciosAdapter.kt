@@ -2,14 +2,19 @@ package com.example.pibja.Adapter
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pibja.AnuncioProgramacao
 import com.example.pibja.Utils.Anuncios
 import com.example.pibja.Async.DownloadImagem
 import com.example.pibja.R
@@ -43,10 +48,17 @@ class AnunciosAdapter (val listsaDeAnuncios: ArrayList<Anuncios>, val context: C
         DownloadImagem(holder.imagem, holder.progressBar).execute(listsaDeAnuncios[position].imagem)
 
         holder.cardView.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
-            builder.setTitle("${holder.titulo.text}")
-            builder.setMessage("${holder.descricao.text}")
-            builder.show()
+            val data = listsaDeAnuncios[position].data
+            val imagem = listsaDeAnuncios[position].imagem
+
+            val intent = Intent(context, AnuncioProgramacao::class.java )
+            intent.putExtra("DATA", data)
+            intent.putExtra("IMG", imagem)
+
+            Toast.makeText(context, "$data, $imagem", Toast.LENGTH_SHORT).show()
+
+            startActivity(context, intent, null)
+
         }
 
     }

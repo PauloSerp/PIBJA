@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AnuncioProgramacao">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/progress_anun_prog"/>
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/banner_anuncios_programacao"
+                android:layout_width="900px"
+                android:layout_height="1536px"
+                android:layout_gravity="center" />
+
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawablePadding="20dp"
+                android:id="@+id/data_prog_anun"
+                android:drawableTint="@color/colorPrimary"
+                android:drawableLeft="@drawable/date_prog_anun"
+                android:text="20/01/2020"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorPrimary"
+                android:drawableLeft="@drawable/time_prog_anun"
+                android:text="19h"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:layout_marginBottom="20dp"
+                android:drawableTint="@color/colorPrimary"
+                android:drawableLeft="@drawable/local_prog_anun"
+                android:text="Primeir igreja batida em Jardim das acácias"
+                android:textStyle="bold"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -32,6 +32,7 @@ class DownloadImagem(val imageView: ImageView, val progress: ProgressBar): Async
         if (result != null){
             progress.visibility = View.GONE
             imageView.setImageBitmap(result)
+            imageView.visibility = View.VISIBLE
         }else{
             progress.visibility = View.GONE
             imageView.setImageResource(R.drawable.errobaixar)
