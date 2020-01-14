@@ -39,7 +39,9 @@ class ProgramacaoMes: Fragment() {
                                 "${document.get("titulo")}",
                                 "${document.get("data")}",
                                 "${document.get("imagem")}",
-                                "${document.get("descricao")}"))
+                                "${document.get("descricao")}",
+                                "${document.get("hora")}",
+                                "${document.get("local")}"))
 
                     }
                     if (context != null){

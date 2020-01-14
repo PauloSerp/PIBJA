@@ -44,8 +44,9 @@ class AnunciosDaSemana :Fragment(){
                             "${document.get("titulo")}",
                             "${document.get("data")}",
                              "${document.get("imagem")}",
-                            "${document.get("descricao")}"
-                        )
+                            "${document.get("descricao")}",
+                                "${document.get("local")}",
+                                "${document.get("hora")}")
                     )
                 }
                 if (context != null) {

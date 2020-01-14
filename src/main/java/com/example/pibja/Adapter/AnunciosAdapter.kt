@@ -24,9 +24,7 @@ class AnunciosAdapter (val listsaDeAnuncios: ArrayList<Anuncios>, val context: C
     class AnunciosViewHolder(view: View): RecyclerView.ViewHolder(view){
 
         val titulo = view.findViewById(R.id.titulo_evento_anuncios) as TextView
-        val data = view.findViewById(R.id.data_evento_anuncios) as TextView
         val imagem = view.findViewById(R.id.imagem_evento_anuncios) as ImageView
-        val descricao = view.findViewById(R.id.descricao_evento_anuncios) as TextView
         val cardView = view.findViewById(R.id.card_view_anuncios) as CardView
         val progressBar = view.findViewById(R.id.progressBarId) as ProgressBar
 
@@ -42,20 +40,20 @@ class AnunciosAdapter (val listsaDeAnuncios: ArrayList<Anuncios>, val context: C
 
     override fun onBindViewHolder(holder: AnunciosViewHolder, position: Int) {
         holder.titulo.text = listsaDeAnuncios[position].titulo
-        holder.data.text = listsaDeAnuncios[position].data
-        holder.descricao.text = listsaDeAnuncios[position].descricao
 
         DownloadImagem(holder.imagem, holder.progressBar).execute(listsaDeAnuncios[position].imagem)
 
         holder.cardView.setOnClickListener {
             val data = listsaDeAnuncios[position].data
             val imagem = listsaDeAnuncios[position].imagem
+            val local = listsaDeAnuncios[position].local
+            val hora = listsaDeAnuncios[position].hora
+            val intent = Intent(context, AnuncioProgramacao::class.java)
 
-            val intent = Intent(context, AnuncioProgramacao::class.java )
             intent.putExtra("DATA", data)
             intent.putExtra("IMG", imagem)
-
-            Toast.makeText(context, "$data, $imagem", Toast.LENGTH_SHORT).show()
+            intent.putExtra("LOCAL", local)
+            intent.putExtra("HORA", hora)
 
             startActivity(context, intent, null)
 

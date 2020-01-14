@@ -16,7 +16,7 @@
         android:importantForAutofill="auto"
         android:id="@+id/imagem_evento_anuncios"
         android:layout_width="match_parent"
-        android:layout_height="1750px"
+        android:layout_height="500dp"
         android:adjustViewBounds="false"
         android:scaleType="centerCrop" />
     <LinearLayout
@@ -24,10 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
-
-
         <TextView
             android:background="@color/pretoTransparente"
             android:id="@+id/titulo_evento_anuncios"
@@ -41,49 +37,12 @@
             android:textStyle="bold" />
 
 
-
-                <TextView
-                    android:id="@+id/data_evento_anuncios"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/data"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@color/colorPrimary" />
-
         <ProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/progressBarId"/>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_gravity="bottom"
-                android:padding="5dp"
-                android:background="@color/pretoTransparente"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
-                    android:id="@+id/descricao_evento_anuncios"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/baloo"
-                    android:maxLines="1"
-                    android:text="@string/descri_evento"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
