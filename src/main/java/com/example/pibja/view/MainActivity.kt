@@ -1,4 +1,4 @@
-package com.example.pibja
+package com.example.pibja.view
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -6,10 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import com.example.pibja.Activitys.AnunciosDaSemana
 import com.example.pibja.Adapter.TabAdapter
-import com.google.android.material.tabs.TabLayout
+import com.example.pibja.R
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity: AppCompatActivity() {

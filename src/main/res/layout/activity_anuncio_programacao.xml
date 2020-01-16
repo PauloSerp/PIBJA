@@ -1,128 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/white"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".AnuncioProgramacao">
-
-    <ProgressBar
-        android:id="@+id/progress_anun_prog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@id/button_ver_mais"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_ver_mais"
-         />
+    android:background="@drawable/shape_anun_prog"
+    android:orientation="vertical"
+    tools:context=".view.AnuncioProgramacao">
 
 
-    <ImageView
-        android:id="@+id/banner_anuncios_programacao"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="@+id/button_ver_mais"
+    <include
+        android:id="@+id/toolbar_anun_prog"
+        layout="@layout/toolbar" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_anun_prog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_anun_prog">
 
-    <ImageView
-        android:src="@drawable/ic_compartilhar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="292dp"
-        app:layout_constraintBottom_toBottomOf="@id/banner_anuncios_programacao"
-        app:layout_constraintLeft_toLeftOf="@id/banner_anuncios_programacao"
-        app:layout_constraintRight_toRightOf="@id/banner_anuncios_programacao"
-        android:layout_marginBottom="50dp"
-        />
+        <ProgressBar
+            android:id="@+id/progress_anun_prog"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
 
-    <TextView
-        android:padding="10dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:id="@+id/button_ver_mais"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="showInOrShowOut"
-        android:text="ver mais"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/banner_anuncios_programacao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
+        <ImageView
+            android:id="@+id/banner_anuncios_programacao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_anun_prog"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/linearLayoutAnunProg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/button_ver_mais"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-
-        <TextView
-            android:id="@+id/data_prog_anun"
-            style="@style/TextAppearance.AppCompat.Large"
+        <LinearLayout
+            android:id="@+id/linearLayoutAnunProg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:drawableLeft="@drawable/date_prog_anun"
-            android:drawablePadding="20dp"
-            android:drawableTint="@android:color/white"
-            android:text="20/01/2020"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/hora_anun_prog"
-            style="@style/TextAppearance.AppCompat.Large"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:drawableLeft="@drawable/time_prog_anun"
-            android:drawablePadding="20dp"
-            android:drawableTint="@android:color/white"
-            android:text="19h"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/local_anun_prog"
-            style="@style/TextAppearance.AppCompat.Large"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:drawableLeft="@drawable/local_prog_anun"
-            android:drawablePadding="20dp"
-            android:drawableTint="@android:color/white"
-            android:text="Primeir igreja batida em Jardim das acácias"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+            <TextView
+                android:id="@+id/data_prog_anun"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/date_prog_anun"
+                android:drawablePadding="20dp"
+                android:drawableTint="@android:color/white"
+                android:text="20/01/2020"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
 
+            <TextView
+                android:id="@+id/hora_anun_prog"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/time_prog_anun"
+                android:drawablePadding="20dp"
+                android:drawableTint="@android:color/white"
+                android:text="19h"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/local_anun_prog"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/local_prog_anun"
+                android:drawablePadding="20dp"
+                android:drawableTint="@android:color/white"
+                android:text="Primeir igreja batida em Jardim das acácias"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

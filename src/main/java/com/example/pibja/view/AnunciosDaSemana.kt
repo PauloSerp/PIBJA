@@ -1,4 +1,4 @@
-package com.example.pibja.Activitys
+package com.example.pibja.view
 
 import android.content.Context
 import android.os.Bundle
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pibja.Utils.Anuncios
 import com.example.pibja.Adapter.AnunciosAdapter
 import com.example.pibja.R
-import com.google.android.gms.ads.AdView
 import com.google.firebase.firestore.FirebaseFirestore
 
 

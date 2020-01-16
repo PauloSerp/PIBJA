@@ -5,8 +5,8 @@ package com.example.pibja.Adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.pibja.Activitys.AnunciosDaSemana
-import com.example.pibja.Activitys.ProgramacaoMes
+import com.example.pibja.view.AnunciosDaSemana
+import com.example.pibja.view.ProgramacaoMes
 
 class TabAdapter(fragmentManeger: FragmentManager): FragmentPagerAdapter(fragmentManeger){
     override fun getItem(position: Int): Fragment {

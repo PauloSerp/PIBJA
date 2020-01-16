@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnuncioProgramacao"></activity>
-        <activity android:name=".Activitys.ProgramacaoMes" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Activitys.AnunciosDaSemana" />
-        <activity android:name=".Activitys.SplashActivity">
+        <activity android:name=".view.AnuncioProgramacao"></activity>
+        <activity android:name=".view.ProgramacaoMes" />
+        <activity android:name=".view.MainActivity" />
+        <activity android:name=".view.AnunciosDaSemana" />
+        <activity android:name=".view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

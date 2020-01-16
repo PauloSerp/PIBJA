@@ -10,7 +10,7 @@
     android:layout_margin="8dp"
     app:cardCornerRadius="@dimen/browser_actions_context_menu_min_padding"
     android:id="@+id/card_view_anuncios"
-    tools:context=".Activitys.AnunciosDaSemana">
+    tools:context=".view.AnunciosDaSemana">
 
     <ImageView
         android:importantForAutofill="auto"
@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:background="@color/pretoTransparente"
+            android:background="@color/colorAccent"
             android:id="@+id/titulo_evento_anuncios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

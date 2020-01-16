@@ -1,20 +1,17 @@
 package com.example.pibja.Adapter
 
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pibja.AnuncioProgramacao
+import com.example.pibja.view.AnuncioProgramacao
 import com.example.pibja.Utils.Anuncios
 import com.example.pibja.Async.DownloadImagem
 import com.example.pibja.R
